@@ -1,0 +1,3 @@
+notebook
+opencv-python
+numpy
