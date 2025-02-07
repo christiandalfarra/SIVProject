@@ -3,15 +3,11 @@
     Calcolare la media e la deviazione standard per ogni canale di colore nella ROI.
     Modellare il colore della strada come l'intervallo tra tre deviazioni standard sopra e sotto la media.
     Estrarre i contorni della strada basandosi sul modello di colore.
-    Applicare un algoritmo di "convex hull" per raffinare i contorni e includere sezioni mancanti della strada, prima va applicato il canny
-Problemi: la modellazione del colore non è semplice perchè le immagini se non hanno un alto contrasto si confonde strada e esterno
-Soluzione: si potrebbe aumentare il contrasto solitamente il cruscotto è scuro e la strada è sul grigio
-
+    Applicare un algoritmo di "convex hull" per raffinare i contorni e includere sezioni mancanti della strada.
 3. Elaborazione delle immagini
     Convertire l'immagine della strada estratta in scala di grigi.
     Applicare un filtro Gaussiano per ridurre il rumore.
     Utilizzare l'algoritmo Canny Edge Detection per individuare i bordi della strada.
-
 
 4. Raffinamento dei bordi
     Applicare un'operazione di dilatazione per eliminare bordi indesiderati ai margini della strada e assorbire oggetti come veicoli.
