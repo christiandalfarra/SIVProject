@@ -3,23 +3,36 @@
     Calcolare la media e la deviazione standard per ogni canale di colore nella ROI.
     Modellare il colore della strada come l'intervallo tra tre deviazioni standard sopra e sotto la media.
     Estrarre i contorni della strada basandosi sul modello di colore.
-    Applicare un algoritmo di "convex hull" per raffinare i contorni e includere sezioni mancanti della strada.
+    Applicare un algoritmo di "convex hull" per raffinare i contorni e includere sezioni mancanti della strada, prima va applicato il canny
+Problemi: la modellazione del colore non è semplice perchè le immagini se non hanno un alto contrasto si confonde strada e esterno
+Soluzione: si potrebbe aumentare il contrasto solitamente il cruscotto è scuro e la strada è sul grigio
+
 3. Elaborazione delle immagini
     Convertire l'immagine della strada estratta in scala di grigi.
     Applicare un filtro Gaussiano per ridurre il rumore.
     Utilizzare l'algoritmo Canny Edge Detection per individuare i bordi della strada.
+
+
 4. Raffinamento dei bordi
     Applicare un'operazione di dilatazione per eliminare bordi indesiderati ai margini della strada e assorbire oggetti come veicoli.
     Rimuovere i bordi che non sono rilevanti per l'analisi delle buche.
+
+
 5. Modellazione delle buche
     Identificare contorni che rappresentano bordi scuri significativi all'interno della strada.
     Applicare vincoli di dimensione per determinare se un contorno è una buca.
+
+
 6. Validazione e classificazione
     Verificare se le buche identificate rispettano le dimensioni e le caratteristiche previste.
     Escludere contorni che rappresentano artefatti o oggetti non rilevanti.
+
+
 7. Proiezione dei risultati
     Sovrapporre le buche rilevate all'immagine originale per la visualizzazione.
     Utilizzare i risultati per misurare metriche come precisione e richiamo.
+
+
 8. Ottimizzazione e valutazione
     Cronometraggio del tempo di esecuzione dell'algoritmo per verificare la possibilità di utilizzo in tempo reale.
     Analizzare i limiti del sistema, come la distanza massima e minima di rilevamento, e migliorare i parametri 
