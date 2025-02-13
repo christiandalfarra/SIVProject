@@ -4,6 +4,7 @@
     Modellare il colore della strada come l'intervallo tra tre deviazioni standard sopra e sotto la media.
     Estrarre i contorni della strada basandosi sul modello di colore.
     Applicare un algoritmo di "convex hull" per raffinare i contorni e includere sezioni mancanti della strada.
+    
 3. Elaborazione delle immagini
     Convertire l'immagine della strada estratta in scala di grigi.
     Applicare un filtro Gaussiano per ridurre il rumore.
